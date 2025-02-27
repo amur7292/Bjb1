@@ -1,19 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amirkhan Temirbek - CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            margin: 5px 0;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .contact {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
 
-import http.server
-import socketserver
-import webbrowser
+<div class="container">
+    <h1>Amirkhan Temirbek</h1>
+    <p><strong>Date of Birth:</strong> 01/12/2008</p>
+    <p><strong>Place of Birth:</strong> Aqtau, Kazakhstan</p>
+    <p><strong>Nationality:</strong> Kazakhstani</p>
+    <p><strong>Gender:</strong> Male</p>
 
-PORT = 8000
-FILE_NAME = "Amirkhan CV MAIN china.pdf"
+    <div class="section">
+        <h2>Contact Information</h2>
+        <p class="contact">Email: <a href="mailto:amirkhan.temirbek@astanaboysbil.edu.kz">amirkhan.temirbek@astanaboysbil.edu.kz</a></p>
+        <p class="contact">Phone: +7 705 777 1582 (WhatsApp)</p>
+        <p class="contact">Location: Astana, Kazakhstan</p>
+    </div>
 
-class CustomHandler(http.server.SimpleHTTPRequestHandler):
-    def do_GET(self):
-        if self.path == f"/{FILE_NAME}":
-            self.path = f"/mnt/data/{FILE_NAME}"
-        return http.server.SimpleHTTPRequestHandler.do_GET(self)
+    <div class="section">
+        <h2>Education</h2>
+        <p><strong>Bilim Innovation Lyceum, Astana</strong> (High School, expected 2026)</p>
+        <p>GPA: 3.3/4</p>
+        <p><strong>Nurorda, Astana</strong> (Primary School, 2015-2021)</p>
+        <p>GPA: 3.8</p>
+    </div>
 
-# Запуск локального сервера
-with socketserver.TCPServer(("", PORT), CustomHandler) as httpd:
-    print(f"Сервер запущен на http://localhost:{PORT}/{FILE_NAME}")
-    webbrowser.open(f"http://localhost:{PORT}/{FILE_NAME}")
-    httpd.serve_forever()
+    <div class="section">
+        <h2>Experience</h2>
+        <p><strong>Fashion News TikTok</strong></p>
+        <p>Started a TikTok account about brands and fashion with the goal of expanding the audience and increasing popularity.</p>
+    </div>
+
+    <div class="section">
+        <h2>Personal Development</h2>
+        <p><strong>Greenwich English Lessons</strong></p>
+        <p>Intermediate+ level English from Greenwich Astana.</p>
+        <p><strong>1 Year of Art School</strong></p>
+        <p>Professional-level drawing skills, experience in design and proportions.</p>
+        <p><strong>Coursera Courses</strong></p>
+        <p>Currently taking courses from the University of Pennsylvania.</p>
+    </div>
+
+    <div class="section">
+        <h2>Volunteering Experience</h2>
+        <p><strong>Jasyl El</strong> – Environmental cleanup and improvement.</p>
+        <p><strong>Brain Rain</strong> – Assisted in organizing an event for top schools in Astana.</p>
+        <p><strong>Help to Veterans</strong> – Visited veterans on May 9th, presented gifts in honor of Victory Day.</p>
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <p><strong>Technical Skills:</strong></p>
+        <ul>
+            <li>Video editing (Adobe Premiere Pro, Photoshop)</li>
+            <li>Graphic design & illustration (Procreate, Adobe Suite)</li>
+            <li>Research & analytical skills</li>
+        </ul>
+        <p><strong>Soft Skills:</strong></p>
+        <ul>
+            <li>Teamwork & leadership</li>
+            <li>Strong communication</li>
+            <li>Problem-solving & critical thinking</li>
+        </ul>
+        <p><strong>Languages:</strong> Kazakh, Russian (Native), English (B2), Turkish (B1)</p>
+    </div>
+</div>
+
+</body>
+</html>
