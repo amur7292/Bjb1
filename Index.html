@@ -98,5 +98,121 @@
 </div>
 
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfyDoUZf317W-UqeMSAVLNg0yyv2cSaVx5Sy6IoIlsYzjeDmg/viewform?embedded=true" width="640" height="399" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amirkhan Temirbek - CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s, color 0.3s;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            margin: 5px 0;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .contact {
+            font-weight: bold;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+        .dark-mode .container {
+            background: #222;
+            color: white;
+        }
+        .dark-mode h1, .dark-mode h2 {
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="buttons">
+    <button onclick="toggleDarkMode()">Dark Mode</button>
+    <button onclick="toggleLanguage()">English/Kazakh</button>
+</div>
+
+<div class="container">
+    <h1 id="name">Amirkhan Temirbek</h1>
+    <p><strong id="dob-label">Date of Birth:</strong> <span id="dob">01/12/2008</span></p>
+    <p><strong id="pob-label">Place of Birth:</strong> <span id="pob">Aqtau, Kazakhstan</span></p>
+    <p><strong id="nationality-label">Nationality:</strong> <span id="nationality">Kazakhstani</span></p>
+    <p><strong id="gender-label">Gender:</strong> <span id="gender">Male</span></p>
+
+    <div class="section">
+        <h2 id="contact-title">Contact Information</h2>
+        <p class="contact">Email: <a href="mailto:amirkhan.temirbek@astanaboysbil.edu.kz">amirkhan.temirbek@astanaboysbil.edu.kz</a></p>
+        <p class="contact">Phone: +7 705 777 1582 (WhatsApp)</p>
+        <p class="contact">Location: Astana, Kazakhstan</p>
+    </div>
+
+    <div class="section">
+        <h2 id="education-title">Education</h2>
+        <p><strong>Bilim Innovation Lyceum, Astana</strong> (<span id="hs">High School, expected 2026</span>)</p>
+        <p>GPA: 3.3/4</p>
+        <p><strong>Nurorda, Astana</strong> (<span id="ps">Primary School, 2015-2021</span>)</p>
+        <p>GPA: 3.8</p>
+    </div>
+
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfyDoUZf317W-UqeMSAVLNg0yyv2cSaVx5Sy6IoIlsYzjeDmg/viewform?embedded=true" width="640" height="399" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+</div>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+
+    function toggleLanguage() {
+        const isEnglish = document.documentElement.lang === "en";
+
+        document.documentElement.lang = isEnglish ? "kk" : "en";
+        document.getElementById("name").textContent = isEnglish ? "Амирхан Темирбек" : "Amirkhan Temirbek";
+        document.getElementById("dob-label").textContent = isEnglish ? "Туған күні:" : "Date of Birth:";
+        document.getElementById("pob-label").textContent = isEnglish ? "Туған жері:" : "Place of Birth:";
+        document.getElementById("nationality-label").textContent = isEnglish ? "Ұлты:" : "Nationality:";
+        document.getElementById("gender-label").textContent = isEnglish ? "Жынысы:" : "Gender:";
+        document.getElementById("gender").textContent = isEnglish ? "Ер" : "Male";
+
+        document.getElementById("contact-title").textContent = isEnglish ? "Байланыс ақпараттары" : "Contact Information";
+        document.getElementById("education-title").textContent = isEnglish ? "Білім" : "Education";
+        document.getElementById("hs").textContent = isEnglish ? "Мектеп, күтілетін аяқталу жылы 2026" : "High School, expected 2026";
+        document.getElementById("ps").textContent = isEnglish ? "Бастауыш мектеп, 2015-2021" : "Primary School, 2015-2021";
+    }
+</script>
+
+</body>
+</html>
 </body>
 </html>
